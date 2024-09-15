@@ -21,7 +21,7 @@ const Card = ({ item: { title, des, icon, photos } }) => {
 
   return (
     <div
-      className="relative w-[500px] h-[500px] px-6 py-6 rounded-lg shadow-shadowOne flex flex-col items-center bg-gradient-to-r from-bodyColor to-[#202327] group hover:bg-white transition-colors duration-300 ease-in-out"
+      className="relative w-full max-w-md h-[500px] px-4 py-6 rounded-lg shadow-lg flex flex-col items-center bg-gradient-to-r from-bodyColor to-[#202327] group hover:bg-white transition-colors duration-300 ease-in-out"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => {
         setIsHovered(false);
@@ -44,7 +44,7 @@ const Card = ({ item: { title, des, icon, photos } }) => {
             )}
           </div>
           <div className="flex flex-col gap-4 h-full w-full">
-            <h2 className="text-2xl md:text-3xl font-titleFont font-bold text-gray-300 group-hover:text-black transition-colors duration-300 ease-in-out">
+            <h2 className="text-xl md:text-2xl font-titleFont font-bold text-gray-300 group-hover:text-black transition-colors duration-300 ease-in-out">
               {title}
             </h2>
             <p className="base group-hover:hidden transition-opacity duration-300 ease-in-out">{des}</p>
@@ -52,7 +52,7 @@ const Card = ({ item: { title, des, icon, photos } }) => {
               <div className="flex flex-wrap justify-center gap-4 mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out w-full h-full relative flex items-center justify-center">
                 {title === "Deployment" ? (
                   photos.map((photo, index) => (
-                    <div key={index} className="relative w-[400px] h-[300px] overflow-hidden rounded-lg">
+                    <div key={index} className="relative w-full sm:w-[300px] h-[200px] overflow-hidden rounded-lg">
                       <img
                         src={photo}
                         alt={`${title.toLowerCase()} logo ${index + 1}`}
@@ -61,7 +61,7 @@ const Card = ({ item: { title, des, icon, photos } }) => {
                     </div>
                   ))
                 ) : (title === "Pitching" || title === "Data Analysis") && photos.length > 1 ? (
-                  <div className="relative w-[400px] h-[300px] overflow-hidden rounded-lg">
+                  <div className="relative w-full sm:w-[300px] h-[200px] overflow-hidden rounded-lg">
                     <img
                       src={showFirstPhoto ? photos[0] : photos[1]} // Toggle between t1 and t2
                       alt={`${title.toLowerCase()} ${showFirstPhoto ? "photo 1" : "photo 2"}`}
@@ -70,7 +70,7 @@ const Card = ({ item: { title, des, icon, photos } }) => {
                   </div>
                 ) : (
                   photos.map((photo, index) => (
-                    <div key={index} className="relative w-[400px] h-[300px] overflow-hidden rounded-lg">
+                    <div key={index} className="relative w-full sm:w-[300px] h-[200px] overflow-hidden rounded-lg">
                       <img
                         src={photo}
                         alt={`technology logo ${index + 1}`}

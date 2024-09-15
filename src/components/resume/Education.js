@@ -29,7 +29,7 @@ const Education = () => {
             des="During my six-month bootcamps at GoMyCode, I developed practical skills in Data Science, with a focus on Python, SQL, and Power BI. The training provided hands-on experience in data analysis, database management, and interactive data visualization, enhancing my ability to extract actionable insights from complex datasets. This intensive program complemented my academic background and prepared me to address real-world data science challenges effectively."
           />
            <ResumeCard
-            title="Baccaleurate degree"
+            title="baccalaureate degree"
             subTitle="Pioneer high school of Monastir "
             result="2017 - 2021"
             des="Experimental Science (with highest honors)"
